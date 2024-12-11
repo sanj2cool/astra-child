@@ -27,7 +27,8 @@ function display_courses_by_category() {
                      <?php
             $query = new WP_Query([
                 'post_type' => 'courses',
-                'posts_per_page' => 3,
+				'post_status' => 'publish',
+                'posts_per_page' => 6,
                 'paged' => 1,
                 'tax_query' => [
                     [
@@ -58,8 +59,8 @@ function display_courses_by_category() {
                             </div>
 
                             <div class="course-action flex justify-between">
-                            <div class="recommended">Recommended</div>
-                            <button>Enroll Now</button>
+                            <div class="recommended"><a href="<?php the_permalink(); ?>">Read More</a></div>
+                            <button class="enroll-course">Enroll Now</button>
                             </div>
                             
                             

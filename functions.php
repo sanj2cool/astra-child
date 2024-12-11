@@ -60,7 +60,7 @@ function load_more_courses_ajax_handler() {
     // Define the query arguments for courses
     $args = array(
         'post_type' => 'courses',
-        'posts_per_page' => 2,
+        'posts_per_page' => 6,
         'paged' => $paged,
         'tax_query' => array(
             array(
